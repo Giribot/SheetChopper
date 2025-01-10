@@ -2,7 +2,7 @@ French/English
 -----
 # SheetChopper
 Un script python basique qui détoure automatiquement un image: genre une planche avec des objets dessus de tailles différentes puis découpe la planche image par image,
-Un outil sympa qui peut être complémentaire à mon autre script pour faire des corpus pour bandes dessinées ici: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
+Un outil sympa qui peut être complémentaire à mon autre script pour faire des corpus zippé pour l'application d création d Bandes dessinées "BDNF" ici: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
 
 Exemple:
 ![00082-1771719671](https://github.com/user-attachments/assets/8d47ec10-7a68-4b97-b9a0-48b710e3d7b3)
@@ -56,7 +56,7 @@ Voilà !
 
 # SheetChopper
 A basic python script that automatically cuts out an image: like a board with objects on it of different sizes then cuts the board image by image,
-A nice tool that can be complementary to my other script to make corpora for comics here: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
+A nice tool that can be complementary to my other script to make zipped corpus for BDNF (an app) for comics here: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
 
 Example:
 ![00082-1771719671](https://github.com/user-attachments/assets/8d47ec10-7a68-4b97-b9a0-48b710e3d7b3)
