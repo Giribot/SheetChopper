@@ -2,7 +2,7 @@ French/English
 -----
 # SheetChopper
 Un script python basique qui détoure automatiquement un image: genre une planche avec des objets dessus de tailles différentes puis découpe la planche image par image,
-Un outil sympa qui peut être complémentaire à mon autre script pour faire des corpus zippé pour l'application d création de Bandes dessinées "BDNF" ici: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
+Un outil sympa qui peut être complémentaire à mon autre script pour faire des corpus zippé pour l'application de création de Bandes dessinées "BDNF" ici: https://github.com/Giribot/Createur-de-Corpus-zip-pour-BDNF
 
 Exemple:
 ![00082-1771719671](https://github.com/user-attachments/assets/8d47ec10-7a68-4b97-b9a0-48b710e3d7b3)
