@@ -18,10 +18,30 @@ le résultat sera:
 ![object_1](https://github.com/user-attachments/assets/7db863f7-05fb-4bfd-a463-92ab4907c9f7)
 ![object_9](https://github.com/user-attachments/assets/7da9fe90-c1d5-4834-bf91-41db7e8b9b4c)
 
-Désignez seulement le répertoire où se trouve vos planches d'images.
-Dans ce même répertoire sera créé un répertoire avec le nom de votre image avec les images extraites de cette planche dedans.
+Mode d'emploi:
 
-Amusez vous bien !
+Il faut avoir python installé.
+Mettre les deux fichiers dans un répertoire quelconque.
+RunMeFirst.bat
+decoup.py
+
+Sur Windows: lancez le programme 'RunMeFirst.bat'
+Ce fichier batch installera au besoin les librairies manquantes de python (si besoin) puis lancera le script python decoup.py
+
+Ailleurs: Linux, Mac,
+Si le fichier batch "RunMeFirst.bat" ne se lance pas:
+Ouvrez le avec un blocnote et installez manuellement les librairies manquantes qui sont notées dedans:
+(au 10/01/2025: il suffit de faire juste
+pip install opencv-python pillow numpy 
+Mais vérifiez si je n'ai pas rajouté par la suite des choses dedans)
+Puis de lancer le script python
+decoup.py.
+
+Le script vous demandera le dossier où vous avez mis vos images que vous avez sélectionnées à détourer/découper.
+Choississez le puis valider.
+le processus est automatique et dans le répertoire que vous avez choisi, le script créera des noms de dossiers correspondant au nom de l'image de type planche (avec des élements distincts que le script détourera et découpera de manière procédurale)....
+
+Voilà !
 
 -----
 
@@ -43,7 +63,27 @@ the result will be:
 ![object_1](https://github.com/user-attachments/assets/7db863f7-05fb-4bfd-a463-92ab4907c9f7)
 ![object_9](https://github.com/user-attachments/assets/7da9fe90-c1d5-4834-bf91-41db7e8b9b4c)
 
-Designate only the directory where your image boards are located.
-In this same directory will be created a directory with the name of your image with the images extracted from this board in it.
+Instructions:
 
-Have fun!
+You must have python installed.
+Put the two files in any directory.
+RunMeFirst.bat
+decoup.py
+
+On Windows: launch the program 'RunMeFirst.bat'
+This batch file will install the missing python libraries (if necessary) and then launch the python script decoup.py
+
+Elsewhere: Linux, Mac,
+If the batch file "RunMeFirst.bat" does not launch:
+Open it with a notepad and manually install the missing libraries that are noted in it:
+(as of 01/10/2025: just do
+pip install opencv-python pillow numpy
+But check if I have not added things in it later)
+Then launch the python script
+decoup.py.
+
+The script will ask you for the folder where you put your images that you selected to crop/cut out.
+Choose it and validate.
+the process is automatic and in the directory you have chosen, the script will create folder names corresponding to the name of the board type image (with distinct elements that the script will procedurally cut out and trim)....
+
+There you go!
