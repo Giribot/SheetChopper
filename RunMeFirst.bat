@@ -1,17 +1,26 @@
 @echo off
 
-:: Vérifier si Python est installé
+REM Vérifier si Python est installé
 python --version >nul 2>&1
-if %errorlevel% neq 0 (
-    echo Python n'est pas installé sur ce système. Veuillez l'installer et réessayer.
+IF %ERRORLEVEL% NEQ 0 (
+    echo Python n'est pas installé. Veuillez installer Python avant d'exécuter ce script.
     pause
     exit /b
 )
 
-:: Installer les bibliothèques nécessaires
-pip install rembg opencv-python pillow
+REM Installer les bibliothèques nécessaires
+echo Installation des bibliothèques Python requises...
+pip install opencv-python opencv-python-headless numpy >nul 2>&1
 
-:: Lancer le script Python
-python decoup.py
+REM Vérifier si le fichier Python existe
+SET SCRIPT=background_removal.py
+IF NOT EXIST "%SCRIPT%" (
+    echo Le fichier %SCRIPT% est introuvable. Assurez-vous qu'il est dans le même répertoire que ce fichier batch.
+    pause
+    exit /b
+)
 
+REM Exécuter le script Python
+echo Exécution du script Python...
+python "%SCRIPT%"
 pause
