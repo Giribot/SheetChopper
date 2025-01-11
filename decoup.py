@@ -36,8 +36,14 @@ def process_image(image_path):
     # S'assurer que le masque est bien en format CV_8UC1
     binary = binary.astype('uint8')
 
+    # Appliquer un flou pour adoucir les bords et réduire les résidus
+    blurred = cv2.GaussianBlur(binary, (5, 5), 0)
+
+    # Réaffiner les bords avec un seuil
+    _, refined_binary = cv2.threshold(blurred, 1, 255, cv2.THRESH_BINARY)
+
     # Trouver les contours des objets
-    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(refined_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # Créer un répertoire pour les sorties
     output_dir = os.path.splitext(image_path)[0]
