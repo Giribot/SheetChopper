@@ -23,9 +23,18 @@ def process_image(image_path):
     # Charger l'image transparente avec OpenCV
     transparent_image = cv2.imread(temp_output_path, cv2.IMREAD_UNCHANGED)
 
-    # Convertir en niveaux de gris pour la détection des contours
+    # Vérifier si le canal alpha existe
+    if transparent_image.shape[2] < 4:
+        print("Erreur : L'image ne contient pas de canal alpha.")
+        os.remove(temp_output_path)
+        return
+
+    # Utiliser le canal alpha pour créer un masque binaire
     alpha_channel = transparent_image[:, :, 3]  # Utiliser le canal alpha
     _, binary = cv2.threshold(alpha_channel, 1, 255, cv2.THRESH_BINARY)
+
+    # S'assurer que le masque est bien en format CV_8UC1
+    binary = binary.astype('uint8')
 
     # Trouver les contours des objets
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
