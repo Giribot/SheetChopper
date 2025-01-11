@@ -9,7 +9,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Installer les bibliothèques nécessaires
-pip install opencv-python pillow numpy
+pip install rembg opencv-python pillow
 
 :: Lancer le script Python
 python decoup.py
