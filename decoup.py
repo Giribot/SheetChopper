@@ -24,8 +24,8 @@ def process_image(image_path):
     transparent_image = cv2.imread(temp_output_path, cv2.IMREAD_UNCHANGED)
 
     # Convertir en niveaux de gris pour la détection des contours
-    gray = cv2.cvtColor(transparent_image[:, :, 3], cv2.COLOR_GRAY2BGR)
-    _, binary = cv2.threshold(gray, 1, 255, cv2.THRESH_BINARY)
+    alpha_channel = transparent_image[:, :, 3]  # Utiliser le canal alpha
+    _, binary = cv2.threshold(alpha_channel, 1, 255, cv2.THRESH_BINARY)
 
     # Trouver les contours des objets
     contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
