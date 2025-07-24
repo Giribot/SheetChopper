@@ -13,7 +13,7 @@ echo Installation des bibliothèques Python requises...
 pip install opencv-python opencv-python-headless numpy >nul 2>&1
 
 REM Vérifier si le fichier Python existe
-SET SCRIPT=background_removal.py
+SET SCRIPT=decoup.py
 IF NOT EXIST "%SCRIPT%" (
     echo Le fichier %SCRIPT% est introuvable. Assurez-vous qu'il est dans le même répertoire que ce fichier batch.
     pause
